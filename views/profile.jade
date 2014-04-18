@@ -1,0 +1,18 @@
+extends profilelayout
+
+block content
+    div.jumbotron.text-center
+        h1 Profile page
+        p.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, explicabo, quisquam, illo ullam sed aliquid excepturi quo ea rerum laborum laboriosam enim debitis omnis placeat accusamus exercitationem adipisci autem atque!
+        a.btn.btn-danger(href="/logout") Logout
+        h3
+          span.fa.fa-user
+          | Local
+        p
+          strong ID: #{user._id}
+          br
+          strong Username: #{user.local.email}
+          br
+          strong Password: #{user.local.password}
+                  

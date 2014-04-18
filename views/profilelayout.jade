@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    script(type="text/javascript" src="/javascripts/jquery.min.js")
+    script(type="text/javascript" src="/javascripts/bootstrap.min.js")
+
+
+- var login = "/login"
+  body
+    div.navbar.navbar-default.navbar-static-top
+        div.container
+            a(href="#").navbar-brand Node-Login
+
+                //- img(src="images/cynder.png")#logo
+
+            button.navbar-toggle(data-toggle="collapse" data-target=".navHeaderCollapse")
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            div.collapse.navbar-collapse.navHeaderCollapse
+                ul.nav.navbar-nav.navbar-right
+                    li(class =pathname =='/' ? 'active' : undefined): a(href="/") Home
+                    li(class =pathname =='/profile' ? 'active' : undefined): a(href="/profile") Profile
+                    li(class =pathname =='/logout' ? 'active' : undefined): a(href="/login") Logout
+
+                    //- END OF NAVBAR
+    block content
+
+
+
+
+    //- FOOTER
+    div.navbar.navbar-default.navbar-fixed-bottom(style="max-height:20px;")
+        div.container
+            p.navbar-text.pull-left David Lopena 2014
+            a.navbar-btn.btn.btn-primary.pull-right Follow me on Facebook
+    //- END OF FOOTER
